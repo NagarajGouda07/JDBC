@@ -14,32 +14,32 @@ public class BluetoothServiceImpl implements BluetoothService {
 			if (name != null && !name.isEmpty() && name.length() > 6 && name.length() < 14) {
 				System.out.println("Valid Name");
 			} else {
-				System.out.println("Invalid Name");
+				System.err.println("Invalid Name");
 				isValid = false;
 			}
 
 			String email = bluetoothDto.getEmail();
 			if ((email.charAt(0) < 'A' || email.charAt(0) > 'Z') || (email.length() < 8 || email.charAt(7) != '@')
 					|| (!email.endsWith("@gmail.com"))) {
-				System.out.println("Invalid Email");
+				System.out.println("valid Email");
 				isValid = false;
 			} else {
-				System.out.println("Valid Email");
+				System.err.println("InValid Email");
 			}
 
 			int age = bluetoothDto.getAge();
 			if (age > 5) {
 				System.out.println("Age is Valid");
 			} else {
-				System.out.println("Age is Invalid");
+				System.err.println("Age is Invalid");
 				isValid = false;
 			}
 
 			String Number = bluetoothDto.getNumber();
 			if (String.valueOf(Number).length() == 10 && String.valueOf(Number).charAt(0) == ('9')) {
-				System.out.println("Valid Number");
+				System.err.println("inValid Number");
 			} else {
-				System.out.println("Invalid Number");
+				System.out.println("valid Number");
 				isValid = false;
 			}
 
