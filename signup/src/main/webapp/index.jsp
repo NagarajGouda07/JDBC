@@ -53,7 +53,7 @@ body {
 
 <body>
 	<div>
-		<form action="signup" method="post">
+		<form action="sign" method="post">
 			<h1>Registration Form</h1>
 			<br>
 			<div class="field">

@@ -27,8 +27,9 @@ public class SignupRepoImpl implements SingupRepo {
 			connection = DriverManager.getConnection(SignupEnum.URL.getValue(), SignupEnum.USERNAME.getValue(),
 					SignupEnum.PASSWORD.getValue());
 
-			pst = connection.prepareStatement("INSERT INTO signup VALUES(?,?,?,?)");
+			pst = connection.prepareStatement("INSERT INTO ram VALUES(?,?,?,?)");
 
+		
 			pst.setString(1, dto.getName());
 			pst.setString(2, dto.getName());
 			pst.setString(3, dto.getEmail());

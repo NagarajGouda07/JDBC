@@ -12,11 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.xworkz.signup.dto.SignupDto;
 import com.xworkz.signup.service.SignupServiceImpl;
 
-@WebServlet("/signup")
+@WebServlet(urlPatterns = "/sign")
 public class SignupServlet extends HttpServlet {
+
+	public SignupServlet() {
+		System.out.println("SignupServletCreated....");
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		String name = req.getParameter("name");
 		String lname = req.getParameter("lname");
 		String email = req.getParameter("email");
@@ -26,9 +31,6 @@ public class SignupServlet extends HttpServlet {
 
 		SignupServiceImpl imp = new SignupServiceImpl();
 		imp.save(dto);
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
-		dispatcher.forward(req, resp);
 
 	}
 

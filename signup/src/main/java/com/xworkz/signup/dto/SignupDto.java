@@ -27,7 +27,7 @@ public class SignupDto {
 		return lname;
 	}
 
-	public void setLame(String lname) {
+	public void setLname(String lname) {
 		this.lname = lname;
 	}
 
